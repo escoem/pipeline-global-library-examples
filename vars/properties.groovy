@@ -1,0 +1,2 @@
+moduleDir="modules"
+apps="SIT"
