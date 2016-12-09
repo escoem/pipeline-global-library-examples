@@ -19,4 +19,3 @@ def testCheckpoint(state){
         echo 'Checkpoint feature available in CloudBees Jenkins Enterprise.'
     }
 }
-Contact GitHub API Training Shop Blog About
