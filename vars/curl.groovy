@@ -16,7 +16,7 @@ def call(String restURL){
   } finally {
     response.close();
   }
-  return ""
+  return "NO"
 }
 
 
