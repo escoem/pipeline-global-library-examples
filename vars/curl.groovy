@@ -1,3 +1,4 @@
+@GrabResolver(name='httpclient', root='https://repo1.maven.org/maven2/')
 @Grab('org.apache.httpcomponents:httpclient:4.5.2')
 
 import org.apache.http.impl.client.CloseableHttpClient;
