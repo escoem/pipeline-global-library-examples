@@ -5,17 +5,18 @@ import org.apache.http.client.methods.HttpGet;
 import org.apache.http.client.methods.CloseableHttpResponse;
 import org.apache.http.impl.client.HttpClients;
 
-def call(steps, String restURL){
+def call(String restURL){
 
   CloseableHttpClient httpclient = HttpClients.createDefault();
   HttpGet httpget = new HttpGet(restURL);
   CloseableHttpResponse response = httpclient.execute(httpget);
   try {
     def line = response.getStatusLine()
-    steps.echo line
+    return line
   } finally {
     response.close();
   }
+  return ""
 }
 
 
