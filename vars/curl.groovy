@@ -12,7 +12,7 @@ def call(String restURL){
   CloseableHttpResponse response = httpclient.execute(httpget);
   try {
     def line = response.getStatusLine()
-    return line
+    return line.toString()
   } finally {
     response.close();
   }
