@@ -1,6 +1,6 @@
 def call(classLoader) {
   System.out.print ("$classLoader")
-  classLoader.getURLs().each {url->
+  ((groovy.lang.GroovyClassLoader.InnerLoader)classLoader).getURLs().each {url->
      System.out.println ("- ${url.toString()}")
   }
   if (classLoader.parent) {
