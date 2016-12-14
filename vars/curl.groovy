@@ -4,7 +4,7 @@
   @Grab('org.apache.httpcomponents:httpclient:4.5.2')
 ])*/
 @Grab('org.apache.httpcomponents:httpclient:4.5.2')
-@GrabConfig(initContextClassLoader = true, systemClassLoader=false )
+//@GrabConfig(initContextClassLoader = true, systemClassLoader=false )
 //@GrabConfig(systemClassLoader=true)
 
 
