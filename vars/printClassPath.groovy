@@ -1,7 +1,7 @@
 def printClassPath(classLoader) {
-  println "$classLoader"
+  System.out.print ("$classLoader")
   classLoader.getURLs().each {url->
-     println "- ${url.toString()}"
+     System.out.println ("- ${url.toString()}")
   }
   if (classLoader.parent) {
      printClassPath(classLoader.parent)
