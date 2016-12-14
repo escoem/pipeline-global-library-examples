@@ -1,3 +1,4 @@
+@GrabConfig( systemClassLoader=true )
 def groovy_app
 
 def call(def buildnumber, def environment) {
