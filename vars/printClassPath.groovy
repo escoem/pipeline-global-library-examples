@@ -6,6 +6,8 @@
   }*/
   if (classLoader.parent) {
      printClassPath(classLoader.parent)
+  } else {
+    System.out.println ("----------")
   }
 }
 //printClassPath this.class.classLoader
