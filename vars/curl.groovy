@@ -1,5 +1,8 @@
+@Grapes([
 @GrabResolver(name='httpclient', root='https://repo1.maven.org/maven2/', m2Compatible='true')
+@GrabConfig(systemClassLoader=true)
 @Grab('org.apache.httpcomponents:httpclient:4.5.2')
+])
 
 import org.apache.http.impl.client.CloseableHttpClient;
 import org.apache.http.client.methods.HttpGet;
