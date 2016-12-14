@@ -4,6 +4,7 @@
   @Grab('org.apache.httpcomponents:httpclient:4.5.2')
 ])*/
 @Grab('org.apache.httpcomponents:httpclient:4.5.2')
+@GrabConfig(initContextClassLoader = true, systemClassLoader=false )
 
 import org.apache.http.impl.client.CloseableHttpClient;
 import org.apache.http.client.methods.HttpGet;
