@@ -1,4 +1,4 @@
-def printClassPath(classLoader) {
+def call(classLoader) {
   System.out.print ("$classLoader")
   classLoader.getURLs().each {url->
      System.out.println ("- ${url.toString()}")
