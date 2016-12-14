@@ -1,4 +1,4 @@
-def call(classLoader) {
+@NonCPS def call(classLoader) {
   System.out.print ("$classLoader")
   ((groovy.lang.GroovyClassLoader.InnerLoader)classLoader).getURLs().each {url->
      System.out.println ("- ${url.toString()}")
