@@ -14,7 +14,7 @@ import org.apache.http.impl.client.HttpClients;
 //groovy.grape.Grape.grab(group:'org.apache.httpcomponents', module:'httpclient', version:'4.5.2')
 
 def call(String restURL){
-
+printClassPath this.class.classLoader
   CloseableHttpClient httpclient = HttpClients.createDefault();
   HttpGet httpget = new HttpGet(restURL);
   CloseableHttpResponse response = httpclient.execute(httpget);
