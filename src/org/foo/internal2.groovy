@@ -1,6 +1,6 @@
 package org.foo
 
-import foo.internal
+//import foo.internal
 
 class internal2 {
 
