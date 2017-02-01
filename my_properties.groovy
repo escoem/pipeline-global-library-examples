@@ -1,6 +1,6 @@
 
 moduleDir="modules"
-apps="SIT2"
+apps="SIT3"
 
 def getModuleDir(){
 	return moduleDir
