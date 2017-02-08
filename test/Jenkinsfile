@@ -1,2 +1,5 @@
-echo "this is a test without agent"
-echo "yes, no agent no workspace"
+echo "now I will take one"
+node ('agent') {
+  sh "echo say hello agent"
+  sh "touch tmp-file"
+}
