@@ -14,7 +14,7 @@ public class JobNameInfo implements Serializable {
     return this.remotePath;
   }
   /**Get the jenkins job url */
-  public String getJobUrl(){
+  public String getJobURL(){
     return this.jobUrl;
   }
   /**GEt the short job name without folder full path */
