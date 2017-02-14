@@ -10,11 +10,11 @@ public class JobNameInfo implements Serializable {
   }
 
   /**Get the remote path for trigger remote and copy artifact remote*/
-  public String getRemotePath(){
+  public String getJenkinsRemotePath(){
     return this.remotePath;
   }
   /**Get the jenkins job url */
-  public String getJobURL(){
+  public String getHttpJobURL(){
     return this.jobUrl;
   }
   /**GEt the short job name without folder full path */
