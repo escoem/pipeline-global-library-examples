@@ -1,8 +1,9 @@
 package org.foo.shared;
+import groovy.transform.Field;
 //Class for the object for jobinfo.groovy
 public class JobNameInfo implements Serializable {
-  String remotePath = "";
-  String jobUrl = "";
+  @Field final String remotePath;
+  @Field final String jobUrl;
   public JobNameInfo(String remotePathParam, String jobURLParam){
     this.remotePath = remotePathParam;
     this.jobUrl = jobURLParam;
