@@ -1,5 +1,0 @@
-echo "now I will take one"
-node ('agent') {
-  sh "echo say hello agent"
-  sh "touch tmp-file"
-}
