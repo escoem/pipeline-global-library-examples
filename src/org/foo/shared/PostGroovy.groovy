@@ -14,12 +14,12 @@ class PostGroovy{
         this.manager = manager
     }
 	
-	def run(){
-	    if ((manager.logContains("foo = bar")){
+    def run(){
+	if ((manager.logContains("foo = bar")){
                 manager.buildFailure()
                 manager.addErrorBadge("found")
                 manager.createSummary("warning.gif").appendText("<h1>found</h1>", false, false, false, "red")
      
         } 
-	}
+   }
 }
