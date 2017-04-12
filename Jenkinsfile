@@ -13,9 +13,9 @@ pipeline {
         always {
             echo "Post"
             node('master'){
-              @Library('post') 
+              @Library('post')
               //import src.org.post.PostGroovy
-              def PG = new src.org.post.PostGroovy(manager)
+              def PG = new org.post.PostGroovy(manager)
               PG.run()
                     
             }
