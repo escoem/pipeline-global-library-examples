@@ -1,11 +1,5 @@
 package org.foo.shared
 
-import hudson.model.*
-import jenkins.model.*
-import java.util.concurrent.atomic.AtomicInteger
-import groovy.io.FileType
-
-
 class PostGroovy2{
 
     def steps
