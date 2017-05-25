@@ -8,7 +8,8 @@ class PostGroovy2{
         this.steps = steps
     }
 	
-    def run(){
+    def please(){
+	    steps.echo
 	if (steps.manager.logContains("foo = bar")){
                 steps.manager.buildFailure()
                 steps.manager.addErrorBadge("found")
