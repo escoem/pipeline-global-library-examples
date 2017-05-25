@@ -2,15 +2,13 @@ package org.foo.shared
 
 class Art{
 
-    def steps
+    def Artifactory
 
-    def Art(steps){
-        this.steps = steps
+    def Art(Artifactory){
+        this.Artifactory = Artifactory
     }
 	
     def please(){
-      steps.echo 'p1'
-	    def server = steps.Artifactory.newServer url: 'artifactory-url', username: 'username', password: 'password'
-	    steps.echo 'p2'
+	    def server = Artifactory.newServer url: 'artifactory-url', username: 'username', password: 'password'
    }
 }
