@@ -6,11 +6,11 @@ import java.util.concurrent.atomic.AtomicInteger
 import groovy.io.FileType
 
 
-class PostGroovy{
+class PostGroovy2{
 
     def steps
 
-    def PostGroovy(steps){
+    def PostGroovy2(steps){
         this.steps = steps
     }
 	
