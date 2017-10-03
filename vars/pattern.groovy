@@ -3,5 +3,5 @@ def call(nodeName, notifyFailureGroup, script, body) {
     echo nodeName
     body()
     echo notifyFailureGroup
-    script.echo nodeName
+    (new org.foo.shared.Printer(script)).print(nodeName)
 }
