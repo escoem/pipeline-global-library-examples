@@ -6,4 +6,5 @@ def call(data) {
     map 
   }
 
+  return result
 }
