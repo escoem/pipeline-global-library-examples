@@ -1,5 +1,5 @@
 // vars/environmentVars.groovy
-def call(args) {
+class environmentVars {
 def artifactoryUrl = 'https://artifactory.com/artifactory'
 def artifactoryServerId = '-123@123'
 def artifactoryCredId = 'ArtifactoryID'
