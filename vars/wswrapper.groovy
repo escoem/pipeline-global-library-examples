@@ -6,7 +6,7 @@ import wslite.*;
 
 
 @NonCPS
-def soapcall() {
+def call() {
   
   def myMessage="<?xml version='1.0' encoding='UTF-8'?>"+"\n"
 	    myMessage= myMessage+"<soap-env:Envelope xmlns:SOAP='http://schemas.xmlsoap.org/soap/envelope/'>"+"\n"
