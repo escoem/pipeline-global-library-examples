@@ -16,7 +16,7 @@ def call() {
       myMessage= myMessage+"</soap-env:Envelope>"+"\n"
        
   def client = new SOAPClient('http://www.webservicex.com/globalweather.asmx')
-	def response = client.send(message)
+	def response = client.send(myMessage)
      
 	return response.text
 }
