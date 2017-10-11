@@ -9,7 +9,7 @@ def call() {
   String str = "ERROR"
   
 	try {
-  def myMessage="<?xml version='1.0' encoding='UTF-8'?>\\n"
+  def myMessage="<?xml version='1.0' encoding='UTF-8'?>\n"
 	    myMessage= myMessage+"<soap-env:Envelope xmlns:SOAP='http://schemas.xmlsoap.org/soap/envelope/'>\\n"
 	    myMessage= myMessage+"<soap-env:Body>\\n"
       myMessage= myMessage+"<GetWeather xmlns='http://www.webserviceX.NET'>\\n"
