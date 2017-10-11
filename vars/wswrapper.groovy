@@ -18,6 +18,8 @@ def call() {
   def client = new SOAPClient('http://www.webservicex.com/globalweather.asmx')
 	def response = client.send(myMessage)
      
-	return response.text
+String str = new String(response.text)
+	
+	return str
 }
 
