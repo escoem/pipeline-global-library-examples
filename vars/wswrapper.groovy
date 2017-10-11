@@ -4,8 +4,6 @@
 import wslite.soap.*; 
 import wslite.*; 
 
-
-@NonCPS
 def call() {
   
   def myMessage="<?xml version='1.0' encoding='UTF-8'?>"+"\n"
