@@ -6,6 +6,9 @@ import wslite.*;
 
 def call() {
   
+  String str = "ERROR"
+  
+	try {
   def myMessage="<?xml version='1.0' encoding='UTF-8'?>\\n"
 	    myMessage= myMessage+"<soap-env:Envelope xmlns:SOAP='http://schemas.xmlsoap.org/soap/envelope/'>\\n"
 	    myMessage= myMessage+"<soap-env:Body>\\n"
@@ -17,8 +20,11 @@ def call() {
        
   def client = new SOAPClient('http://www.webservicex.com/globalweather.asmx')
 	def response = client.send(myMessage)
-     
-String str = new String(response.text)
+		str = new String(response.text)
+	} catch (err) {
+		str = "ERR: " + err
+	}
+		
 	
 	return str
 }
