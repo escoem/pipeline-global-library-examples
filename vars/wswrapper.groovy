@@ -26,4 +26,3 @@ def soapcall() {
 	return response.text
 }
 
-return this
