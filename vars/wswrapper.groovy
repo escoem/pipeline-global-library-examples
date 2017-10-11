@@ -1,12 +1,9 @@
 // vars/wswrapper.groovy
 @Grab('com.github.groovy-wslite:groovy-wslite:1.1.2') 
 
-import wslite.http.auth.*; 
-import wslite.rest.*; 
 import wslite.soap.*; 
 import wslite.*; 
-import jenkins.util.*; 
-import jenkins.model.*;
+
 
 @NonCPS
 def soapcall() {
