@@ -6,4 +6,6 @@ def foo() {
    println(System.getenv("MY_VAR"))
    
    echo(System.getenv("MY_VAR"))
+   
+   sh 'echo $MY_VAR'
 }
