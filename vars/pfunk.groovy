@@ -8,4 +8,6 @@ def foo() {
    echo(System.getenv("MY_VAR"))
    
    sh 'echo $MY_VAR'
+   
+   echo env.MY_VAR
 }
