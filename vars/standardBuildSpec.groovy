@@ -2,7 +2,7 @@
 import org.foo.*
 
 //Map allBuilds = [:]
-//builds = [:]
+builds = [:]
     
 def call(cfg)
 {
@@ -13,3 +13,5 @@ def call(cfg)
 
     build.execute()
 }
+
+return
