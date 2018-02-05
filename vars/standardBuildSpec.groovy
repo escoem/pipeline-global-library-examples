@@ -3,8 +3,6 @@ import org.foo.*
 
 //Map allBuilds = [:]
 //builds = [:]
-java.util.Map builds = new java.util.HashMap()
-    
     
 def call(cfg)
 {
