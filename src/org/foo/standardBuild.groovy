@@ -1,8 +1,15 @@
 package org.foo
 
+class standardBuild implements Serializable {
+    
 def api; 
 def lib;
-
+def script;
+    
+standardBuild (script) {
+    this.script = script
+}
+    
 def dotnetapi(cfg)
 {
     def build = new dotnetApiBuild()
@@ -10,7 +17,7 @@ def dotnetapi(cfg)
     cfg.delegate = build
     cfg()
     //api = build
-    standardBuildSpec.builds[build.projectName] = build
+    script.standardBuildSpec.builds[build.projectName] = build
 }
 
 def dotnetlib(cfg)
@@ -20,7 +27,7 @@ def dotnetlib(cfg)
     cfg.delegate = build
     cfg()
     lib = build
-    standardBuildSpec.builds[build.projectName] = build
+    script.standardBuildSpec.builds[build.projectName] = build
 }
 
 def execute()
@@ -35,4 +42,5 @@ def execute()
             }
         }
     }
+}
 }
