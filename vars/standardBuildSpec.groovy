@@ -6,7 +6,7 @@ builds = [:]
     
 def call(cfg)
 {
-    def build = new standardBuild(this)
+    def build = new standardBuild()
     cfg.resolveStrategy = Closure.DELEGATE_FIRST
     cfg.delegate = build
     cfg()
