@@ -2,8 +2,10 @@
 import org.foo.*
 
 //Map allBuilds = [:]
-builds = [:]
-
+//builds = [:]
+java.util.Map builds = new java.util.HashMap()
+    
+    
 def call(cfg)
 {
     def build = new standardBuild()
