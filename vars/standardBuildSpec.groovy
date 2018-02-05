@@ -2,7 +2,7 @@
 import org.foo.*
 
 //Map allBuilds = [:]
-def builds = [:]
+// builds = [:]
     
 def call(cfg)
 {
