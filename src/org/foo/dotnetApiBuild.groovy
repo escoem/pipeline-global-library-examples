@@ -1,5 +1,7 @@
 package org.foo
 
+class dotnetApiBuild {
+
 String projectName
 String projectDir
 
@@ -15,4 +17,4 @@ def execute()
     */
 }
 
-return this
+}
