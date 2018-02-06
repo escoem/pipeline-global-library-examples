@@ -2,11 +2,12 @@
 import org.foo.*
 
 //Map allBuilds = [:]
-builds = [:]
+//builds = [:]
     
 def call(cfg)
 {
-    def build = new standardBuild()
+    def builds = [:]
+    def build = new StandardBuild(builds)
     cfg.resolveStrategy = Closure.DELEGATE_FIRST
     cfg.delegate = build
     cfg()
