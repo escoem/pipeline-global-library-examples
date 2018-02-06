@@ -4,7 +4,7 @@ class StandardBuild {
 
     def api; 
     def lib;
-    def builds;
+    java.util.Map builds;
     def steps;
     
     StandardBuild(builds, steps) {
@@ -20,7 +20,8 @@ class StandardBuild {
         cfg.delegate = build
         cfg()
         //api = build
-        builds[build.projectName] = build
+        //builds[build.projectName] = build
+        builds.put(build.projectName, build)
     }
 
     def dotnetlib(cfg)
@@ -30,20 +31,23 @@ class StandardBuild {
         cfg.delegate = build
         cfg()
         lib = build
-        builds[build.projectName] = build
+        //builds[build.projectName] = build
+        builds.put(build.projectName, build)
     }
 
     def execute()
     {
         //steps.node ()
         //{
-            for (build in builds)
-            {
-                steps.stage (build.projectName) 
+            //for (build in builds)
+            for (entry : builds.entrySet())
+            //{
+
+                steps.stage (entry.getKey()) 
                 {
-                    build.execute()
+                    entry.getValue().execute()
                 }
-            }
+            //}
         //}
     }
 }
