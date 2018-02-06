@@ -35,8 +35,8 @@ class StandardBuild {
 
     def execute()
     {
-        steps.node ()
-        {
+        //steps.node ()
+        //{
             for (build in builds)
             {
                 steps.stage (build.projectName) 
@@ -44,6 +44,6 @@ class StandardBuild {
                     build.execute()
                 }
             }
-        }
+        //}
     }
 }
