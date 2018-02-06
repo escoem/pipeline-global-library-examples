@@ -40,7 +40,7 @@ class StandardBuild {
         //steps.node ()
         //{
             //for (build in builds)
-            for (entry : builds.entrySet())
+            for (entry in builds.entrySet())
             //{
 
                 steps.stage (entry.getKey()) 
