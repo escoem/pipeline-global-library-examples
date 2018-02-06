@@ -37,17 +37,15 @@ class StandardBuild {
 
     def execute()
     {
-        //steps.node ()
-        //{
-            //for (build in builds)
+        steps.node ()
+        {
             for (entry in builds.entrySet())
-            //{
-
+            {
                 steps.stage (entry.getKey()) 
                 {
                     entry.getValue().execute()
                 }
-            //}
-        //}
+            }
+        }
     }
 }
