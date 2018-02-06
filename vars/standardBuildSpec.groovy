@@ -7,7 +7,7 @@ import org.foo.*
 def call(cfg)
 {
     def builds = [:]
-    def build = new StandardBuild(builds)
+    def build = new StandardBuild(builds, steps)
     cfg.resolveStrategy = Closure.DELEGATE_FIRST
     cfg.delegate = build
     cfg()
