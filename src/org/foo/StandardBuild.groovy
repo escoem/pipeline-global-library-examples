@@ -5,9 +5,11 @@ class StandardBuild {
     def api; 
     def lib;
     def builds;
+    def steps;
     
-    StandardBuild(builds) {
+    StandardBuild(builds, steps) {
         this.builds = builds
+        this.steps = steps
     }
     
     
@@ -33,11 +35,11 @@ class StandardBuild {
 
     def execute()
     {
-        node ()
+        steps.node ()
         {
             for (build in builds)
             {
-                stage (build.projectName) 
+                steps.stage (build.projectName) 
                 {
                     build.execute()
                 }
