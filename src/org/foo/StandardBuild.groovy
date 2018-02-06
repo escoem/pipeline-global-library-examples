@@ -15,7 +15,7 @@ class StandardBuild {
     
     def dotnetapi(cfg)
     {
-        def build = new dotnetApiBuild()
+        def build = new DotnetApiBuild(steps)
         cfg.resolveStrategy = Closure.DELEGATE_FIRST
         cfg.delegate = build
         cfg()
@@ -26,7 +26,7 @@ class StandardBuild {
 
     def dotnetlib(cfg)
     {
-        def build = new dotnetlibBuild()
+        def build = new DotnetlibBuild(steps)
         cfg.resolveStrategy = Closure.DELEGATE_FIRST
         cfg.delegate = build
         cfg()
