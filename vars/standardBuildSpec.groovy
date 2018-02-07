@@ -7,7 +7,7 @@ import org.foo.*
 def call(cfg)
 {
     java.util.Map builds = new java.util.HashMap()
-    def build = new StandardBuild(builds, script)
+    def build = new StandardBuild(builds, this)
     cfg.resolveStrategy = Closure.DELEGATE_FIRST
     cfg.delegate = build
     cfg()
