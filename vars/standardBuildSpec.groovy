@@ -12,7 +12,7 @@ def call(cfg)
     cfg.delegate = build
     cfg()
 
-    build.execute()
+    build.execute(scm)
 }
 
 return
