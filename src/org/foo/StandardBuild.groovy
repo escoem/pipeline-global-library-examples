@@ -35,10 +35,11 @@ class StandardBuild {
         builds.put(build.projectName, build)
     }
 
-    def execute()
+    def execute(scm)
     {
         steps.node ()
         {
+            steps.checkout scm
             for (entry in builds.entrySet())
             {
                 steps.stage (entry.getKey()) 
