@@ -14,8 +14,10 @@ def execute()
 {
     script.echo "Executing dotnetlibBuild. Project name: ${projectName}; Project dir: ${projectDir}"
 
+    script.dotnet.project = projectName
     script.dotnet.restore "path"
     
+    script.echo "--> PROJECT " + script.dotnet.project
     /*
     dotnet.restore path, jfrog.url_all_nuget
     dotnet.publish config.projectName, config.target
