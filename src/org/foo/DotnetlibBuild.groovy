@@ -4,17 +4,17 @@ class DotnetlibBuild {
     
     String projectName
     String projectDir
-    def steps
+    def script
     
-    DotnetlibBuild(steps) {
-        this.steps = steps
+    DotnetlibBuild(script) {
+        this.steps = script
     }
     
 def execute()
 {
     steps.echo "Executing dotnetlibBuild. Project name: ${projectName}; Project dir: ${projectDir}"
 
-    steps.dotnet.restore "path"
+    script.dotnet.restore "path"
     
     /*
     dotnet.restore path, jfrog.url_all_nuget
