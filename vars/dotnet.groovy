@@ -4,4 +4,4 @@ def restore(path) {
   echo "Restoring $path"
 }
 
-return
+return this
