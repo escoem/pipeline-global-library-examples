@@ -7,12 +7,12 @@ class DotnetlibBuild {
     def script
     
     DotnetlibBuild(script) {
-        this.steps = script
+        this.script = script
     }
     
 def execute()
 {
-    steps.echo "Executing dotnetlibBuild. Project name: ${projectName}; Project dir: ${projectDir}"
+    script.echo "Executing dotnetlibBuild. Project name: ${projectName}; Project dir: ${projectDir}"
 
     script.dotnet.restore "path"
     
