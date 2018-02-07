@@ -15,4 +15,4 @@ def call(cfg)
     build.execute(scm)
 }
 
-return
+return this
