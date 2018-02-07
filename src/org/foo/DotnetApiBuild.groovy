@@ -7,7 +7,7 @@ class DotnetApiBuild {
     def script
     
     DotnetApiBuild(script) {
-        this.steps = script
+        this.script = script
     }
     
 def execute()
