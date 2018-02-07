@@ -14,6 +14,8 @@ def execute()
 {
     steps.echo "Executing dotnetlibBuild. Project name: ${projectName}; Project dir: ${projectDir}"
 
+    steps.dotnet.restore "path"
+    
     /*
     dotnet.restore path, jfrog.url_all_nuget
     dotnet.publish config.projectName, config.target
