@@ -5,11 +5,11 @@ class StandardBuild {
     def api; 
     def lib;
     java.util.Map builds;
-    def steps;
+    def script;
     
-    StandardBuild(builds, steps) {
+    StandardBuild(builds, script) {
         this.builds = builds
-        this.steps = steps
+        this.steps = script
     }
     
     
@@ -37,12 +37,12 @@ class StandardBuild {
 
     def execute(scm)
     {
-        steps.node ()
+        script.node ()
         {
-            steps.checkout scm
+            script.checkout scm
             for (entry in builds.entrySet())
             {
-                steps.stage (entry.getKey()) 
+                script.stage (entry.getKey()) 
                 {
                     entry.getValue().execute()
                 }
