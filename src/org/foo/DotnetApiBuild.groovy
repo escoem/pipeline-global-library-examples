@@ -4,15 +4,15 @@ class DotnetApiBuild {
 
     String projectName
     String projectDir
-    def steps
+    def script
     
-    DotnetApiBuild(steps) {
-        this.steps = steps
+    DotnetApiBuild(script) {
+        this.steps = script
     }
     
 def execute()
 {
-    steps.echo "Executing dotnetapiBuild. Project name: ${projectName}; Project dir: ${projectDir}"
+    script.echo "Executing dotnetapiBuild. Project name: ${projectName}; Project dir: ${projectDir}"
 
     /*
     dotnet.restore path, jfrog.url_all_nuget
