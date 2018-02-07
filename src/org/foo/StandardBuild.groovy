@@ -9,13 +9,13 @@ class StandardBuild {
     
     StandardBuild(builds, script) {
         this.builds = builds
-        this.steps = script
+        this.script = script
     }
     
     
     def dotnetapi(cfg)
     {
-        def build = new DotnetApiBuild(steps)
+        def build = new DotnetApiBuild(script)
         cfg.resolveStrategy = Closure.DELEGATE_FIRST
         cfg.delegate = build
         cfg()
@@ -26,7 +26,7 @@ class StandardBuild {
 
     def dotnetlib(cfg)
     {
-        def build = new DotnetlibBuild(steps)
+        def build = new DotnetlibBuild(script)
         cfg.resolveStrategy = Closure.DELEGATE_FIRST
         cfg.delegate = build
         cfg()
