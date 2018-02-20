@@ -1,6 +1,6 @@
-node('agent') {
+node() {
   sh 'date'
   sh 'pwd'
-  checkout scm
+//  checkout scm
   echo 'bye'
 }
