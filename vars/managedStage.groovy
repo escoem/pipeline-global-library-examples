@@ -6,7 +6,9 @@ def call(String stageName, String userId, Closure body) {
   echo "debug -> userId    = $userId"
   echo "debug -> builder   = $builder"
   if (builder == userId) {
-    body()
+    stage(stageName) {
+      body()
+    }
   } else {
      echo "skiping stage $stageName because $builder is not allowed $builder != $userId" 
   }
