@@ -1,0 +1,13 @@
+// vars/managedStage.groovy
+def call(String stageName, String userId, Closure body) {
+  String builder = currentBuild.rawBuild.getActions(hudson.model.CauseAction.class).get(0).
+        findCause(hudson.model.Cause.UserIdCause.class).getUserId()
+  echo "debug -> stageName = $stageName"
+  echo "debug -> userId    = $userId"
+  echo "debug -> builder   = $builder"
+  if (builder == userId) {
+    body()
+  } else {
+     echo "skiping stage $stageName because $builder is not allowed $builder != $userId" 
+  }
+}
